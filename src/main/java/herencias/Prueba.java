@@ -42,7 +42,7 @@ public class Prueba {
         //For Each para mostrar el ArrayList       
         for (Ajedrez aux : lista) {
             System.out.println(aux);
-        //If para acceder al método de la clase seleccionada
+            //If para acceder al método de la clase seleccionada
             if (aux instanceof Piezas) {
                 ((Piezas) aux).curiosidadPiezas();
             }
@@ -58,10 +58,29 @@ public class Prueba {
                 ((Caballo) aux).curiosidadCaballo();
                 System.out.println("-------------------------------");
             }
-        //If para acceder al metodo que se sobreescribe en todas las clases
+            //If para acceder al metodo que se sobreescribe en todas las clases
             System.out.println("-------------------------------");
             aux.info();
             System.out.println("-------------------------------");
+        }
+        System.out.println("-------------------------------");
+        System.out.println("-------------------------------");
+
+        //Métodos de  ArrayList
+        System.out.println("Index of:");
+        //Para indicar en que posición está eñ objeto
+        System.out.println(lista.indexOf(caballito1));
+
+        System.out.println("Constains:");
+        //para saber si el objeto está dentro del ArrayList
+        System.out.println(lista.contains(ficha1));
+        //elimina el objeto del arrayList
+
+        lista.remove(ficha1);
+        System.out.println("Lista luego de borrar uno de los objetos");
+        for (Ajedrez aux : lista) {
+            System.out.println(aux);
+            
         }
 
     }
