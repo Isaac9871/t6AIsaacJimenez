@@ -5,6 +5,8 @@
  */
 package herencias;
 
+import java.util.Objects;
+
 /**
  *
  * @author isaac
@@ -49,4 +51,35 @@ public class Caballo extends Piezas {
     public String toString() {
         return super.toString()+"Caballo{" + "casillasMovimineto=" + casillasMovimineto + ", formaMovimiento=" + formaMovimiento + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 71 * hash + this.casillasMovimineto;
+        hash = 71 * hash + Objects.hashCode(this.formaMovimiento);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Caballo other = (Caballo) obj;
+        if (this.casillasMovimineto != other.casillasMovimineto) {
+            return false;
+        }
+        if (!Objects.equals(this.formaMovimiento, other.formaMovimiento)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }
