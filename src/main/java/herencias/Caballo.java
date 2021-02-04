@@ -9,14 +9,20 @@ package herencias;
  *
  * @author isaac
  */
-public class Caballo extends Piezas{
-   private int casillasMovimineto;
- private String formaMovimiento;
+public class Caballo extends Piezas {
+
+    private int casillasMovimineto;
+    private String formaMovimiento;
 
     public Caballo(int casillasMovimineto, String formaMovimiento, int cantPiezas, boolean color, int cantCasillas, String objetivo) {
         super(cantPiezas, color, cantCasillas, objetivo);
         this.casillasMovimineto = casillasMovimineto;
         this.formaMovimiento = formaMovimiento;
+    }
+
+    @Override
+    public void info() {
+        System.out.println("No puede hacer otro movimiento que no sea en forma de L");
     }
 
     public int getCasillasMovimineto() {
@@ -38,5 +44,5 @@ public class Caballo extends Piezas{
     @Override
     public String toString() {
         return "Caballo{" + "casillasMovimineto=" + casillasMovimineto + ", formaMovimiento=" + formaMovimiento + '}';
-    } 
+    }
 }
