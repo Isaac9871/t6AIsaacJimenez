@@ -27,6 +27,11 @@ public class Caballo extends Piezas {
         System.out.println("No puede hacer otro movimiento que no sea en forma de L");
     }
     
+     @Override
+    public void fichas() {
+        System.out.println("Cada jugador tiene 2 caballos");
+    }
+    
       public void curiosidadCaballo(){
        System.out.println("El caballo es la unica pieza que puede avanzar saltando otras piezas");
    }
