@@ -24,6 +24,10 @@ public class Caballo extends Piezas {
     public void info() {
         System.out.println("No puede hacer otro movimiento que no sea en forma de L");
     }
+    
+      public void curiosidadCaballo(){
+       System.out.println("El caballo es la unica pieza que puede avanzar saltando otras piezas");
+   }
 
     public int getCasillasMovimineto() {
         return casillasMovimineto;
