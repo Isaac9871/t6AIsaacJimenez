@@ -19,7 +19,10 @@ public class Piezas extends Ajedrez {
         this.color = color;
     }
     
- 
+    @Override
+   public void info(){
+        System.out.println("Cada jugador tiene 16 piezas que puede controlar");   
+    }
 
     public int getCantPiezas() {
         return cantPiezas;
