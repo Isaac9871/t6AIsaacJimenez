@@ -19,6 +19,11 @@ public class Peon extends Piezas{
         this.casillasMovimineto = casillasMovimineto;
         this.formaMovimiento = formaMovimiento;
     }
+    
+      @Override
+   public void info(){
+        System.out.println("El peon solo puede atacar de forma diagonal");   
+    }
 
     public int getCasillasMovimineto() {
         return casillasMovimineto;
