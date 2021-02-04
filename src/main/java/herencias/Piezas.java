@@ -23,6 +23,11 @@ public class Piezas extends Ajedrez {
    public void info(){
         System.out.println("Cada jugador tiene 16 piezas que puede controlar");   
     }
+   
+   public void curiosidadPiezas(){
+       System.out.println("Hay un movimiento en el cual podemos mover dos piezas en un unico turno.\n"
+               + "El movimiento es llamado Enroque, en el cual podemos mover el rey al lado de la torre y esta se traslada al otro lado del rey para protger dicha ficha");
+   }
 
     public int getCantPiezas() {
         return cantPiezas;
