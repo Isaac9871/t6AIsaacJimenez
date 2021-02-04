@@ -18,6 +18,10 @@ public class Ajedrez {
         this.cantCasillas = cantCasillas;
         this.objetivo = objetivo;
     }
+
+    public Ajedrez() {
+    }
+    
      
     public void info(){
         System.out.println("Juego de estrategia de 1 vs 1");   

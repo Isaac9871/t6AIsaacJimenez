@@ -47,7 +47,7 @@ public class Piezas extends Ajedrez {
 
     @Override
     public String toString() {
-        return "Piezas{" + "cantPiezas=" + cantPiezas + ", color=" + color + '}';
+        return super.toString()+ "Piezas{" + "cantPiezas=" + cantPiezas + ", color=" + color + '}';
     }
 
    

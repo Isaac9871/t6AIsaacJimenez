@@ -47,6 +47,6 @@ public class Caballo extends Piezas {
 
     @Override
     public String toString() {
-        return "Caballo{" + "casillasMovimineto=" + casillasMovimineto + ", formaMovimiento=" + formaMovimiento + '}';
+        return super.toString()+"Caballo{" + "casillasMovimineto=" + casillasMovimineto + ", formaMovimiento=" + formaMovimiento + '}';
     }
 }
