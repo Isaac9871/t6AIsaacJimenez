@@ -24,6 +24,10 @@ public class Peon extends Piezas{
    public void info(){
         System.out.println("El peon solo puede atacar de forma diagonal");   
     }
+   
+     public void curiosidadPeon(){
+       System.out.println("El peon al llegar al final del tablero,podrá convertirse en la Dama");
+   }
 
     public int getCasillasMovimineto() {
         return casillasMovimineto;
