@@ -54,7 +54,7 @@ public class Peon extends Piezas{
 
     @Override
     public String toString() {
-        return super.toString()+"Peon{" + "casillasMovimineto=" + casillasMovimineto + ", formaMovimiento=" + formaMovimiento + '}';
+        return super.toString()+" Peon{" + "casillasMovimineto=" + casillasMovimineto + ", formaMovimiento=" + formaMovimiento + '}';
     }
 
     @Override

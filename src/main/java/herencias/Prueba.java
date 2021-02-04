@@ -26,7 +26,7 @@ public class Prueba {
 
         Caballo caballito1 = new Caballo(4, "En forma de L", 1, true, 64, "Limitar el movimiento de las piezas enemigas");
         Caballo caballito2 = new Caballo(4, "En forma de L", 1, false, 64, "ponerse en un lugar donde protega a las piezas aliadas");
-        
+
         //Creación del ArrayList
         ArrayList<Ajedrez> lista = new ArrayList<>();
         //Añadir objetos creados anteriormente a la ArrayList
@@ -38,6 +38,31 @@ public class Prueba {
         lista.add(ficha2);
         lista.add(caballito1);
         lista.add(caballito2);
+
+        //For Each para mostrar el ArrayList       
+        for (Ajedrez aux : lista) {
+            System.out.println(aux);
+        //If para acceder al método de la clase seleccionada
+            if (aux instanceof Piezas) {
+                ((Piezas) aux).curiosidadPiezas();
+            }
+            System.out.println("-------------------------------");
+            if (aux instanceof Peon) {
+                System.out.println("-------------------------------");
+                ((Peon) aux).curiosidadPeon();
+                System.out.println("-------------------------------");
+            }
+
+            if (aux instanceof Caballo) {
+                System.out.println("-------------------------------");
+                ((Caballo) aux).curiosidadCaballo();
+                System.out.println("-------------------------------");
+            }
+        //If para acceder al metodo que se sobreescribe en todas las clases
+            System.out.println("-------------------------------");
+            aux.info();
+            System.out.println("-------------------------------");
+        }
 
     }
 }
