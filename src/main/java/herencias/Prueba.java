@@ -17,13 +17,13 @@ public class Prueba {
         //Creación de los objetos
         Ajedrez juego1 = new Ajedrez(64, "Acorralar el rey enemigo");
         Ajedrez juego2 = new Ajedrez(64, "Defender tu rey del jugador enemigo");
-
+ // Conversión implícita
         Piezas peonesB = new Piezas(8, true, 64, "Derrotar al ejercito enemigo");
         Piezas peonesN = new Piezas(8, false, 64, "Derrotar al ejercito enemigo");
-
+ // Conversión implícita
         Peon ficha1 = new Peon(1, "frontal", 1, true, 64, "Defender a su rey");
         Peon ficha2 = new Peon(1, "frontal", 1, false, 64, "Derrotar al rey enemigo");
-
+ // Conversión implícita
         Caballo caballito1 = new Caballo(4, "En forma de L", 1, true, 64, "Limitar el movimiento de las piezas enemigas");
         Caballo caballito2 = new Caballo(4, "En forma de L", 1, false, 64, "ponerse en un lugar donde protega a las piezas aliadas");
 
@@ -43,16 +43,18 @@ public class Prueba {
         for (Ajedrez aux : lista) {
             System.out.println(aux);
             //If para acceder al método de la clase seleccionada
+// Conversiones explícitas
             if (aux instanceof Piezas) {
                 ((Piezas) aux).curiosidadPiezas();
             }
             System.out.println("-------------------------------");
+// Conversiones explícitas
             if (aux instanceof Peon) {
                 System.out.println("-------------------------------");
                 ((Peon) aux).curiosidadPeon();
                 System.out.println("-------------------------------");
             }
-
+// Conversiones explícitas
             if (aux instanceof Caballo) {
                 System.out.println("-------------------------------");
                 ((Caballo) aux).curiosidadCaballo();
@@ -60,6 +62,7 @@ public class Prueba {
             }
             //If para acceder al metodo que se sobreescribe en todas las clases
             System.out.println("-------------------------------");
+//Método Polimorfico
             aux.info();
             System.out.println("-------------------------------");
         }
